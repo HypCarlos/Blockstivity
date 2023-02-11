@@ -30,9 +30,9 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <ListHeader listName={"🤾🏿‍♂️ To Do List"} />
+      <ListHeader listName={"🤾🏿‍♂️ To Do List"} getData={getData} />
       {sortedTodos?.map((task) => (
-        <ListItem key={task.id} task={task} />
+        <ListItem key={task.id} task={task} getData={getData} />
       ))}
     </div>
   );
